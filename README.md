@@ -7,3 +7,5 @@ Disini saya membuat skenario yang berisikan beberapa pertanyaan terkait data yan
 3. Negara yang rata2 gajinya lebih tinggi dari rata2 gaji keseluruhan
 4. Gaji tertinggi pertahun untuk posisi %data analyst% and FT
 5. Rata2 gaji per jenis pekerjaan dalam Rupiah per bulan
+
+SOURCE DATA : https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries
