@@ -1,4 +1,4 @@
--- 1. Selisih kenaikan posisi EN ke MI per tahun
+-- 1. Difference between salary increases for EN to MI positions per year.
 with ds_1 as
 (
 select work_year, avg(salary_in_usd) avg_sal_usd
@@ -28,7 +28,7 @@ left join ds_2
 on ds_year.work_year = ds_2.work_year
 ;
 
--- 2. Rata-rata gaji job_title tertinggi per tahun
+-- 2. Average the highest job salary from each year.
 with ds_year as
 (
 select distinct work_year
@@ -75,14 +75,14 @@ from ds_year
 		on ds_year.work_year = ds_3.work_year;
         
 
--- 3. Negara yang rata2 gajinya lebih tinggi dari rata2 gaji keseluruhan
+-- 3. Country where the average salary is greater than total average salary.
 select company_location, avg(salary_in_usd) as avg_sal_per_country
 from ds_salaries
 group by company_location
 having avg_sal_per_country > (select avg(salary_in_usd) from ds_salaries)
 order by avg_sal_per_country desc;
 
--- 4. Gaji tertinggi pertahun untuk posisi %data analyst% and FT
+-- 4. Most highly salary from each year for %data analyst% and FT.
 with ds_year as
 (
 select distinct work_year
@@ -128,7 +128,7 @@ on ds_year.work_year = ds_2.work_year
 left join ds_3
 on ds_year.work_year = ds_3.work_year;
 
--- 5. Rata2 gaji per jenis pekerjaan dalam Rupiah per bulan
+-- 5. Most highly salary from each year for %data analyst% and FT.
 select job_title, (avg(salary_in_usd) * 15000)/12 as avg_monthly_rp
 from ds_salaries
 where job_title like "%data analyst"
