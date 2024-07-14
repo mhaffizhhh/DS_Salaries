@@ -10,4 +10,6 @@ Here I do several queries, namely:
 Result can be seen [Query](https://github.com/mhaffizhhh/query1/blob/main/jawaban.sql).
 
 ## Dataset
-[Data](https://github.com/mhaffizhhh/query1/blob/main/ds_salaries.csv) source: https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries
+[Data](https://github.com/mhaffizhhh/query1/blob/main/ds_salaries.csv).
+
+[Source](https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries).
